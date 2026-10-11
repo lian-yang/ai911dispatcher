@@ -1,0 +1,5 @@
+User-Agent: *
+Allow: /
+Disallow: /404.html
+
+Sitemap: https://ai911dispatcher.vercel.app/sitemap.xml

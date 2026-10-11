@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI 911 Dispatcher: How Artificial Intelligence Is Transforming Emergency Dispatch (2026)</title>
+<meta name="description" content="What is an AI 911 dispatcher? Learn how AI handles emergency calls, try an interactive dispatch triage demo, and see whether AI will assist or replace human call takers.">
+<link rel="canonical" href="https://ai911dispatcher.vercel.app/">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": "AI 911 Dispatcher",
+  "url": "https://ai911dispatcher.vercel.app/",
+  "description": "Explainer and interactive resources about AI 911 dispatchers and AI-assisted emergency call handling."
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What is an AI 911 dispatcher?",
+      "acceptedAnswer": { "@type": "Answer", "text": "An AI 911 dispatcher is a software system that uses speech recognition and language models to answer non-emergency calls, transcribe speech in real time, classify incident priority, and route calls or drafts to human telecommunicators. In nearly all deployments today, AI assists rather than replaces human dispatchers." }
+    },
+    {
+      "@type": "Question",
+      "name": "Will AI replace 911 dispatchers?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Full replacement is not happening at emergency communication centers. AI is being used for overflow calls, transcription, translation, and prioritization suggestions, while humans keep final authority on dispatch decisions. The realistic near-term model is one human dispatcher supervising several AI-handled lines." }
+    },
+    {
+      "@type": "Question",
+      "name": "How much does an AI dispatcher cost or save?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Vendor pricing is usually quoted per call line or per center rather than publicly listed. Reported benefits focus on shorter call handling times, after-hours coverage, and reduced hold queues rather than direct salary replacement." }
+    }
+  ]
+}
+</script>
+<style>
+  :root { --bg:#f8fafc; --card:#ffffff; --ink:#0f172a; --mut:#475569; --brand:#b91c1c; --brand-soft:#fef2f2; --line:#e2e8f0; }
+  * { box-sizing:border-box; }
+  body { margin:0; font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif; color:var(--ink); background:var(--bg); line-height:1.65; }
+  header { background:var(--brand); color:#fff; padding:.8rem 1rem; }
+  header .wrap { max-width:960px; margin:0 auto; display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:.5rem; }
+  header a { color:#fff; text-decoration:none; font-weight:600; }
+  nav a { margin-left:1rem; font-weight:400; opacity:.9; font-size:.92rem; }
+  nav a:hover { opacity:1; text-decoration:underline; }
+  main { max-width:960px; margin:0 auto; padding:1.5rem 1rem; }
+  h1 { font-size:1.9rem; line-height:1.25; margin:.2rem 0 .8rem; }
+  h2 { font-size:1.35rem; margin-top:2rem; border-bottom:2px solid var(--line); padding-bottom:.3rem; }
+  h3 { font-size:1.08rem; }
+  p, li { color:var(--mut); }
+  .hero { background:var(--card); border:1px solid var(--line); border-radius:12px; padding:1.5rem; margin-bottom:1.5rem; }
+  .card { background:var(--card); border:1px solid var(--line); border-radius:12px; padding:1.5rem; margin:1.5rem 0; }
+  .crumb { font-size:.85rem; color:#94a3b8; margin-bottom:.5rem; }
+  .crumb a { color:#64748b; }
+  table { width:100%; border-collapse:collapse; margin:1rem 0; font-size:.95rem; }
+  th, td { border:1px solid var(--line); padding:.55rem .7rem; text-align:left; }
+  th { background:var(--brand-soft); color:var(--ink); }
+  /* triage demo */
+  #demo .row { display:flex; gap:.6rem; flex-wrap:wrap; margin:.6rem 0; }
+  #demo select, #demo button { padding:.6rem .8rem; border-radius:8px; border:1px solid var(--line); font-size:1rem; }
+  #demo button { background:var(--brand); color:#fff; border:none; cursor:pointer; font-weight:600; }
+  #demo .out { margin-top:1rem; padding:1rem; border-radius:8px; background:var(--bg); border:1px dashed var(--line); display:none; }
+  .tag { display:inline-block; padding:.15rem .6rem; border-radius:999px; font-size:.8rem; font-weight:700; }
+  .t1 { background:#fee2e2; color:#991b1b; } .t2 { background:#ffedd5; color:#9a3412; }
+  .t3 { background:#fef9c3; color:#854d0e; } .t4 { background:#dcfce7; color:#166534; }
+  .note { font-size:.85rem; color:#94a3b8; margin-top:.5rem; }
+  footer { border-top:1px solid var(--line); margin-top:3rem; padding:1.5rem 1rem; text-align:center; font-size:.85rem; color:#94a3b8; }
+  footer a { color:#64748b; }
+  .grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(240px,1fr)); gap:1rem; margin:1rem 0; }
+  .grid .card { margin:0; }
+</style>
+</head>
+<body>
+<header>
+  <div class="wrap">
+    <a href="/">AI 911 Dispatcher</a>
+    <nav>
+      <a href="/salary.html">Salary</a>
+      <a href="/jobs.html">Jobs</a>
+      <a href="/certification.html">Certification</a>
+      <a href="/will-ai-replace-dispatchers.html">Will AI Replace Them?</a>
+    </nav>
+  </div>
+</header>
+<main>
+  <p class="crumb"><a href="/">Home</a> › AI 911 Dispatcher</p>
+  <div class="hero">
+    <h1>AI 911 Dispatcher: How Artificial Intelligence Is Changing Emergency Call Handling</h1>
+    <p>Emergency communication centers are starting to use <strong>AI 911 dispatchers</strong> — software that can answer overflow calls, transcribe speech in real time, translate languages, classify incident priority, and hand a structured summary to a human telecommunicator. This guide explains how the technology works, where it is deployed, what it means for dispatcher careers, and where the limits still are.</p>
+    <p><em>Try the interactive triage demo below to see how AI prioritizes incidents — the same logic pattern used inside modern dispatch software.</em></p>
+  </div>
+
+  <div class="card" id="demo">
+    <h2>Interactive Demo: AI Triage Classifier</h2>
+    <p>Real AI dispatch systems listen to a call, transcribe it, and score urgency. This simplified demo shows the classification step: pick a scenario and see how a priority score is computed from threat, injury, and mobility signals.</p>
+    <div class="row">
+      <select id="s1" aria-label="Weapons involved">
+        <option value="0">No weapons mentioned</option>
+        <option value="3">Weapon mentioned</option>
+      </select>
+      <select id="s2" aria-label="Injuries reported">
+        <option value="0">No injuries reported</option>
+        <option value="2">Injuries reported</option>
+        <option value="4">Serious or life-threatening injuries</option>
+      </select>
+      <select id="s3" aria-label="Suspect status">
+        <option value="0">Suspect left the scene</option>
+        <option value="2">Suspect still on scene</option>
+      </select>
+      <select id="s4" aria-label="Caller mobility">
+        <option value="0">Caller is safe</option>
+        <option value="2">Caller is hiding or trapped</option>
+      </select>
+      <button id="go">Classify priority</button>
+    </div>
+    <div class="out" id="out"></div>
+    <p class="note">Educational simulation only — not connected to any real emergency system. Real deployments always keep a human in the loop.</p>
+  </div>
+
+  <h2>What Does an AI 911 Dispatcher Actually Do?</h2>
+  <p>An AI 911 dispatcher is not a robot replacing the person on the headset. Today's systems take over narrow, well-defined parts of the call workflow:</p>
+  <ul>
+    <li><strong>Overflow answering.</strong> When every human call taker is busy, AI can answer the queued call, ask structured questions, and keep the caller on the line instead of hearing a busy tone.</li>
+    <li><strong>Real-time transcription.</strong> Speech-to-text built for radio chatter and panicked voices produces a live transcript the telecommunicator can read while listening.</li>
+    <li><strong>Translation.</strong> Live translation lets an English-speaking call taker handle calls in dozens of languages without waiting for an interpreter line.</li>
+    <li><strong>Priority classification.</strong> Language models flag weapons, injuries, and suspect location from the transcript and suggest a call type and priority code for the human to confirm.</li>
+    <li><strong>Summary handoff.</strong> When the call is transferred to a human, AI attaches a clean structured summary so the dispatcher does not start from zero.</li>
+  </ul>
+  <p>In this model the AI dispatcher behaves like a very fast, very tireless <em>assistant telecommunicator</em>: it never decides to send resources on its own.</p>
+
+  <h2>Why Centers Are Testing AI Right Now</h2>
+  <p>Three pressures are driving adoption. First, staffing: many 911 centers run chronically short, and overtime burns out experienced telecommunicators. Second, non-emergency load: a large share of calls to emergency lines are administrative or misdials, which is exactly the kind of volume an AI line can absorb. Third, technology maturity: speech recognition and language models finally handle noisy, emotional, multi-speaker audio well enough to be useful as a first pass.</p>
+  <p>Vendors selling AI dispatch tooling report benefits like shorter average call handling, full after-hours coverage for non-emergency lines, and automatic multilingual support. Independent benchmarks are still rare, which is why most agencies pilot AI on <em>non-emergency</em> lines first.</p>
+
+  <h2>Where the Limits Are</h2>
+  <ul>
+    <li><strong>Accountability.</strong> Dispatch decisions carry legal and life-safety weight. Agencies are not willing to let software be the final decision-maker, and regulators are not asking them to.</li>
+    <li><strong>Edge cases.</strong> Whispered calls, background gunshots, cardiology symptoms described indirectly — the cost of a misclassification is enormous, so uncertain calls must escalate to humans immediately.</li>
+    <li><strong>Public trust.</strong> Calling 911 and hearing a synthetic voice can escalate panic. Deployments therefore usually introduce AI on the back end (transcription for the human) before the front end (AI answering).</li>
+  </ul>
+
+  <h2>What This Means for Dispatcher Careers</h2>
+  <p>The realistic near-term picture is <strong>one human supervising several AI-handled lines</strong>, not zero humans. Telecommunicators who can supervise AI tools, validate AI-generated incident summaries, and handle the hardest calls become more valuable, not less. For the numbers behind that career question, see our pages on <a href="/salary.html">AI-era dispatcher salaries</a>, <a href="/jobs.html">AI dispatcher jobs and skills</a>, and <a href="/certification.html">training and certification options</a>. For the deeper argument, read <a href="/will-ai-replace-dispatchers.html">Will AI replace 911 dispatchers?</a></p>
+
+  <h2>Key Terms, Explained Simply</h2>
+  <div class="grid">
+    <div class="card"><h3>Call taker vs. dispatcher</h3><p>The call taker talks to the caller; the dispatcher radios the units. AI today mostly assists the call-taking side.</p></div>
+    <div class="card"><h3>Priority dispatch</h3><p>A structured questioning system (like the well-known protocol systems) that turns caller answers into a response code. AI classification mimics this logic.</p></div>
+    <div class="card"><h3>Overflow line</h3><p>The queue when all human call takers are busy — the first place agencies put AI, because a structured AI interview beats a busy signal.</p></div>
+    <div class="card"><h3>Human in the loop</h3><p>The design rule that a person confirms every dispatch decision. It is the reason AI dispatch is "assistant" today, not "replacement".</p></div>
+  </div>
+</main>
+<footer>
+  <p>AI911Dispatcher.com — independent explainer about AI in emergency communications. Not affiliated with any agency or vendor. Educational information only; in a real emergency always call your local emergency number.</p>
+  <p><a href="/salary.html">Salary</a> · <a href="/jobs.html">Jobs</a> · <a href="/certification.html">Certification</a> · <a href="/will-ai-replace-dispatchers.html">Will AI Replace Dispatchers?</a></p>
+</footer>
+<script>
+  document.getElementById("go").addEventListener("click", function () {
+    var score = ["s1","s2","s3","s4"].reduce(function (a, id) { return a + Number(document.getElementById(id).value); }, 0);
+    var tier, label, cls;
+    if (score >= 7) { tier = "P1 — IMMEDIATE"; label = "Lights-and-siren response suggested; human dispatcher confirms and dispatches."; cls = "t1"; }
+    else if (score >= 4) { tier = "P2 — URGENT"; label = "Priority response suggested; caller kept on the line until a human joins."; cls = "t2"; }
+    else if (score >= 2) { tier = "P3 — ROUTINE"; label = "Standard queue; report or scheduled response."; cls = "t3"; }
+    else { tier = "P4 — ADMINISTRATIVE"; label = "Non-emergency handling or transfer to an administrative line."; cls = "t4"; }
+    var out = document.getElementById("out");
+    out.style.display = "block";
+    out.innerHTML = '<span class="tag ' + cls + '">' + tier + '</span><p>' + label + '</p><p class="note">Priority score: ' + score + ' / 11. A real system would also weigh location verification, callback validation, and transcript keywords — and a human confirms every outcome.</p>';
+  });
+</script>
+</body>
+</html>
